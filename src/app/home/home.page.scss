@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #FFFFFF;
 
   margin: 0;
 }
@@ -28,3 +28,25 @@
 ion-grid {
   padding: 30px;
 }
+ion-toolbar{
+  --background: #e6d5d5;
+   --color: black;
+   --padding: 20px;
+   --padding-bottom: 20px;
+}
+ion-searchbar{
+  --background: #FFFFFF;
+  --color: black;
+  --border-radius: 20px;
+  
+}
+ion-card{
+  --background: #e6d5d5;
+  --color : black;
+  --margin-top: 10px;
+  --margin-bottom: 100px;
+}
+ion-card-title{
+  --color : black;
+}
+
