@@ -13,10 +13,28 @@ ion-searchbar{
   margin: auto;
 }
 .divlista{
-    padding: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
     background-color: #ac8bc5;
 }
 .juego{
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ion-label{
+    background-color: #e6d5d5;
+}
+.resumen{
+    align-self: center;
+    background-color: #e6d5d5;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 20px;
+}
+.pagar{
+    align-items: center;
 }

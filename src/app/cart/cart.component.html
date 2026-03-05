@@ -12,7 +12,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div>
     <div class="divlista">
       <ion-list>
       @for (item of items; track item; let index = $index) {
@@ -25,8 +24,14 @@
        }
       </ion-list>
     </div>
-  </div>
-  <ion-label>Total: $227</ion-label>
 
-  
+    <div class="resumen">
+      <p class="juego">Resumen:</p>
+      <p class="juego">Articulos: 1</p>
+      <p class="juego">Total:</p>
+      <div class="pagar">
+        <ion-button shape="round">Pagar</ion-button>
+      </div>
+    </div>
+
 </ion-content>  
