@@ -1,3 +1,21 @@
-<p>
-  login works! holaas
-</p>
+<ion-header [translucent]="true">
+   <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="assets\img\logoText.png" height="60px"/>
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
+  <div>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Iniciar sesión</ion-card-title>
+      <img src="assets\img\portadalogin.png" height="40%" width="100%" class="ion-text-center"/>
+    <ion-input  class="ion-text-center"type="text" placeholder="Ingresa Tu Usuario"></ion-input>
+    <ion-input class="ion-text-center" type="password" placeholder="Ingresa Tu Contraseña"></ion-input>
+    <ion-button class="ion-text-center" >Iniciar sesión</ion-button>
+    <ion-label class="ion-text-center">¿No tienes una cuenta?</ion-label>
+    <ion-button class="ion-text-center" >Registrarse</ion-button>
+    </ion-card-header>
+  </div>
+
+</ion-content>

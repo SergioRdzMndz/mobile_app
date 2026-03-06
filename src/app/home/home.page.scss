@@ -25,28 +25,51 @@
 #container a {
   text-decoration: none;
 }
-ion-grid {
-  padding: 30px;
-}
+
+
 ion-toolbar{
   --background: #e6d5d5;
-   --color: black;
-   --padding: 20px;
-   --padding-bottom: 20px;
-}
-ion-searchbar{
-  --background: #FFFFFF;
   --color: black;
-  --border-radius: 20px;
-  
 }
+
+ion-searchbar{
+  --background: #ffffff;
+  color: black;
+  --border-radius: 14px;
+  height: 40px;
+  max-width: 500px;
+  margin: auto;
+}
+
 ion-card{
   --background: #e6d5d5;
-  --color : black;
-  --margin-top: 10px;
-  --margin-bottom: 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: black;
 }
+
 ion-card-title{
-  --color : black;
+  color: black;
+
 }
+
+.img-title{
+  width: 330px;
+  height: 160px;
+  border-radius: 8px;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.text-title{
+  font-family: 'Gameplay';
+  color: black;
+  padding-left: 10px;
+  text-shadow:
+    2px 2px 0 #00f0ff,
+    3px 3px 0 #ff00b3;
+}
+
+
 
