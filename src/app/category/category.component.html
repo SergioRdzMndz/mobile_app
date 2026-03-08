@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+   <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="assets\img\logoText.png" height="60px"/>
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar show-cancel-button="always" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content [fullscreen]="true">
+  <hr>
+<ion-text class = "title">Shooters</ion-text>
+<hr>
+
+<ion-card *ngFor="let game of games; let i = index">
+  <img class= "img-card" alt="Silhouette of mountains" src = {{game.img}} />
+      <div class="games-info">
+        <div>
+          <h1>{{game.name}}</h1>
+          <h2>${{game.price}}</h2>
+        </div>
+        <div class="div-button">
+            <button>🛒</button>
+        </div>
+      </div>
+      
+     <p>
+        {{ expandedIndex === i ? game.description : (game.description | slice:0:80) + '...' }}
+      </p>
+      <span class="more" (click)="toggleDescription(i)">
+        {{ expandedIndex === i ? 'Ver menos' : 'Ver más' }}
+      </span>
+</ion-card>
+
+</ion-content>
