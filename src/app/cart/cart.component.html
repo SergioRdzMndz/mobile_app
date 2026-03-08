@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+   <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <img src="assets\img\logoText.png" height="60px"/>
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-searchbar show-cancel-button="always" placeholder="Buscar"></ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <div class="divlista">
+      <ion-list>
+      @for (item of items; track item; let index = $index) {
+      <ion-item>
+         <ion-avatar slot="start">
+           <img src="assets\img\project_zomboid.jpg">
+         </ion-avatar>
+         <ion-label class="juego" >Project Zomboid $227</ion-label>
+       </ion-item>
+       }
+      </ion-list>
+    </div>
+  </div>
+  <ion-label>Total: $227</ion-label>
+
+  
+</ion-content>  
