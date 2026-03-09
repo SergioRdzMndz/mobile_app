@@ -30,8 +30,19 @@
       <p class="juego">Articulos: 1</p>
       <p class="juego">Total:</p>
       <div class="pagar">
-        <ion-button shape="round">Pagar</ion-button>
+        <ion-button shape="round" class="pay">Pagar</ion-button>
       </div>
     </div>
 
-</ion-content>  
+  </ion-content>  
+  <ion-tab-bar slot="bottom">
+  <ion-tab-button href="/home">
+    <ion-icon name="home"></ion-icon>
+    <ion-label class="tabbtn">Inicio</ion-label>
+  </ion-tab-button>
+  <ion-tab-button href="/cart">
+    <ion-icon name="cart"></ion-icon>
+    <ion-label class="tabbtn">Carrito</ion-label>
+  </ion-tab-button>
+  </ion-tab-bar>
+

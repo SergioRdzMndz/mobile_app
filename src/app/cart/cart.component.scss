@@ -38,3 +38,21 @@ ion-label{
 .pagar{
     align-items: center;
 }
+.example-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.tabbtn{
+    background-color: black;
+}
+ion-tab-bar{
+    background-color: black;
+}
+ion-tab-button{
+    background-color: black;
+}
+.pay{
+    --background: #ffac62;
+}

@@ -64,6 +64,20 @@ ion-card-title{
     2px 2px 0 #00f0ff,
     3px 3px 0 #ff00b3;
 }
-
+.example-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.tabbtn{
+    background-color: black;
+}
+ion-tab-bar{
+    background-color: black;
+}
+ion-tab-button{
+    background-color: black;
+}
 
 
