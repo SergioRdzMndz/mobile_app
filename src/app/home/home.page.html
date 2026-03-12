@@ -15,7 +15,7 @@
   <hr>
 <ion-text class = "text-title">Categorias de videojuegos</ion-text>
 <hr>
-<ion-card button = "true">
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>Shooters</ion-card-title>
     <img class= "img-title" src="assets\img\Shooters.jpg"/>
@@ -25,7 +25,7 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card> 
 
-<ion-card button = "true" >
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>Mundo abierto</ion-card-title>
     <img class= "img-title" src="assets\img\MundoAbierto.jpg"/>
@@ -34,7 +34,7 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card>
 
-<ion-card button = "true" >
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>Horror</ion-card-title>
     <img class= "img-title" src="assets\img\Horror.jpg"/>
@@ -43,7 +43,7 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card>
 
-<ion-card button="true">
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>Plataformas</ion-card-title>
     <img class= "img-title" src="assets\img\Plataformas.jpg"/>
@@ -53,7 +53,7 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card>
 
-<ion-card button="true">
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>RPG</ion-card-title>
     <img class= "img-title" src="assets\img\RPG.jpg"/>
@@ -63,7 +63,7 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card>
 
-<ion-card button="true">
+<ion-card button = "true" href="/category">
   <ion-card-header>
     <ion-card-title>Aventura</ion-card-title>
     <img class= "img-title" src="assets\img\Aventuras.jpg"/>
@@ -72,3 +72,20 @@
   <ion-card-content> Card Content </ion-card-content>
 </ion-card>
 </ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button href="/home">
+    <ion-icon name="home"></ion-icon>
+    <ion-label class="tabbtn">Inicio</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button href="/cart">
+    <ion-icon name="cart"></ion-icon>
+    <ion-label class="tabbtn">Carrito</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="router.navigate(['/login'])">
+    <ion-icon name="salir"></ion-icon>
+    <ion-label class="tabbtn">Salir</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

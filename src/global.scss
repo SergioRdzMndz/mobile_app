@@ -51,4 +51,25 @@ ion-toolbar{
   --background: #e6d5d5;
   --color: black;
 }
+/* Esto va en global.scss */
+.custom-alert-colors {
+  --background: #ac8bc5 !important; /* Color de fondo del cuadro */
+  --backdrop-opacity: 0.7; /* Opacidad del fondo oscuro de atrás */
+  
+  /* Forzar color de los textos */
+  .alert-wrapper {
+    background: #ac8bc5 !important;
+    border: 2px solid #e6d5d5; /* Un borde para que se vea más retro */
+  }
 
+  .alert-title, 
+  .alert-sub-title, 
+  .alert-message {
+    color: #ffffff !important; /* Texto en blanco para que resalte */
+  }
+
+  .alert-button {
+    color: #e6d5d5 !important; /* Color de los botones (Aceptar/Cancelar) */
+    font-weight: bold;
+  }
+}

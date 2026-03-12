@@ -1,74 +1,134 @@
+// Fondo general de la página
+ion-content {
+  --background: #e6d5d5; // Crema principal
+}
 
-ion-toolbar{
+// MANTENEMOS TU HEADER Y TOOLBAR ORIGINAL
+ion-toolbar {
   --background: #e6d5d5;
   --color: black;
 }
 
-ion-searchbar{
+// Buscador
+ion-searchbar {
   --background: #ffffff;
-  color: black;
+  --color: #414141;
+  --placeholder-color: #524162;
   --border-radius: 14px;
   height: 40px;
   max-width: 500px;
   margin: auto;
 }
-.title{
+
+// Título de la sección (Ajustado a la paleta pero respetando tu estilo)
+.title {
   padding: 30px;
   color: black;
   font-family: 'Gameplay';
   font-size: 25px;
-  text-shadow: 2px 2px 0 #974886,
+  text-shadow: 
+    2px 2px 0 #974886,
     4px 4px 0 #fffb0094;
 }
 
-ion-card{
-  --background: white;
+// Tarjetas de Juegos (Estilo Retro Respawn)
+ion-card {
+  --background: #b49c9c; // Café/rosáceo de la paleta
   border-radius: 15px;
+  border: 2px solid #5a4131; // Borde café oscuro
+  box-shadow: 4px 4px 0px #735262; // Sombra sólida arcade
+  margin: 15px;
 }
-.img-card{
+
+.img-card {
   padding: 10px;
   border-radius: 20px;
   height: 190px;
-  width: 400px;
+  width: 100%;
+  object-fit: cover;
 }
-h1{
+
+h1 {
   font-size: 20px;
-  color: black;
+  color: #524162; // Morado oscuro para títulos
   padding-left: 10px;
+  font-weight: bold;
 }
-h2{
+
+h2 {
   padding-left: 10px;
+  color: #5a4131; // Café oscuro para subtítulos
 }
-.more{
-  color: purple;
+
+p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #414141; // Gris oscuro para descripción
+}
+
+.more {
+  color: #8362ac; // Morado vibrante
   font-weight: bold;
   padding: 10px;
 }
 
-p{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.games-info{
+.games-info {
   display: flex;
   align-items: center;
 }
-button{
-  background-color: #e6d5d5;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+
+// Botones de acción
+button {
+  background-color: #ffac62; // Naranja de la paleta (Color de acento)
+  color: #524162; // Texto morado oscuro
+  padding: 10px 15px;
   margin-top: 10px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
+  font-size: 22px;
   border-radius: 15px;
-  border: none;
+  border: 2px solid #5a4131;
+  box-shadow: 2px 2px 0px #5a4131;
+  transition: 0.1s;
 }
-.div-button{
- margin-left: auto;
- margin-right: 15px;
-}
+
 button:active {
-  background-color: #974886;
+  background-color: #8362ac; // Cambia a morado al presionar
+  color: white;
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+.div-button {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+// --- TABS (Consistentes con el resto de la App) ---
+ion-tab-bar {
+  --background: #524162; // Morado oscuro
+  border-top: 3px solid #ffac62; // Línea naranja
+  height: 65px;
+}
+
+ion-tab-button {
+  --color: #b49c9c; // Inactivo
+  --color-selected: #ffac62; // Seleccionado
+  background-color: #524162;
+
+  .tabbtn {
+    background-color: transparent !important;
+    color: inherit;
+  }
+}
+
+ion-icon {
+  background-color: transparent !important;
+  font-size: 26px;
+}
+.cartbtn{
+    --background: #8362ac; // Morado fuerte
+  --background-activated: #524162; // Morado muy oscuro al presionar
+  --color: #ffffff;
+  font-weight: bold;
+  --border-radius: 20px;
 }

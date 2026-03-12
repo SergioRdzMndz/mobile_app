@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { IonCardContent, IonCol, IonCard, IonCardHeader, IonCardTitle, IonGrid, IonRow, IonContent, IonTitle, IonToolbar, IonHeader, IonSearchbar, IonText, IonCardSubtitle } from "@ionic/angular/standalone";
+import { IonCardContent, IonCol, IonCard, IonCardHeader, IonCardTitle, IonGrid, IonRow, IonContent, IonTitle, IonToolbar, IonHeader, IonSearchbar, IonText, IonCardSubtitle, IonTabBar, IonTabButton, IonIcon, IonLabel, IonButton } from "@ionic/angular/standalone";
 import { CommonModule } from '@angular/common';
-
-
+import { addIcons } from 'ionicons';
+import { cart, home, logOutOutline } from 'ionicons/icons';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss'],
-  imports: [ IonCard,CommonModule, IonContent, IonTitle, IonToolbar, IonHeader, IonSearchbar, IonText],
+  imports: [IonButton, IonLabel, IonIcon, IonTabButton, IonTabBar,  IonCard,CommonModule, IonContent, IonTitle, IonToolbar, IonHeader, IonSearchbar, IonText],
 })
 
 
@@ -26,8 +27,18 @@ games = [
     {name : "Call of Duty®: Modern Warfare® II", description : "Call of Duty®: Modern Warfare® II lanza a los jugadores en un conflicto global sin precedentes que incluye el regreso de los icónicos Operadores de la Fuerza Operativa 141.", price: 1399, img : "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3595230/ce4d5e53b36cb9d3c4309d1df72bf8663bbbc7ef/header.jpg?t=1764711899"}
 ]
 
-  constructor() { }
+  constructor(public router: Router) {
+    // Registramos los iconos: home, cart y el de logout
+    addIcons({ 
+    home, 
+    cart, 
+    'salir': logOutOutline  // <--- Este es el "apodo" o nombre clave
+  });
+  }
 
   ngOnInit() {}
-
+  logout() {
+    console.log('Regresando al Login...');
+    this.router.navigate(['/login']);
+  }
 }

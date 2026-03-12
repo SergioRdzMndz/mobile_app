@@ -1,40 +1,138 @@
-#container {
+// Contenedor principal para centrar la tarjeta en pantalla
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+// Clase de centrado general
+.ion-text-center {
+  display: block;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
-ion-toolbar{
+
+// Toolbar (Header) - Manteniendo tu esquema
+ion-toolbar {
   --background: #e6d5d5;
-  --color: black;
+  --color: #414141;
 }
-ion-card-header{
-    --background: #e6d5d5;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  color: black;
-}
-ion-card-title{
-  color: rgba(0, 0, 0, 0.932);
 
+// Tarjeta de Login (Contenedor café/rosáceo)
+ion-card-header {
+  background-color: #b49c9c; 
+  border-radius: 15px;
+  border: 3px solid #5a4131;
+  box-shadow: 6px 6px 0px #735262;
+  max-width: 400px; // Tamaño ideal para móvil y desktop
+  width: 100%;
+  padding: 25px;
 }
-ion-input{
-  --background: #ac8bc5;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 100px;
-  border-width: 25px;
-  color: black;
-  
-}
-ion-button{
-  --background: #ddcccc;
-  margin-top: 10px;
+
+ion-card-title {
+  color: #524162;
+  font-family: 'Gameplay', sans-serif;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-  border-radius: 8px;
-  color: black;
+}
+
+// Estilo para las imágenes
+img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #5a4131;
+}
+
+// --- CLASES PARA LOS INPUTS (User y Password) ---
+.user, .password {
+  --background: #fdf6ff; // Blanco púrpura suave
+  --color: #414141;
+  --placeholder-color: #735262;
+  --highlight-color-focused: #8362ac;
+  
+  margin-top: 15px;
+  border-radius: 10px; // Bordes suavizados, no circulares
+  border: 2px solid #ac8bc5;
+  padding: 5px 15px !important;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+// Botones (Estilo Retro Naranja)
+ion-button {
+  --background: #ffac62; 
+  --color: #524162;
+  --border-radius: 10px;
+  margin-top: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 3px 3px 0px #5a4131;
+  height: 45px;
+  
+  &::part(native) {
+    border: 2px solid #5a4131;
+  }
+
+  &:active {
+    --background: #8362ac;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+}
+
+// Label "¿No tienes cuenta?"
+ion-label {
+  display: block;
+  color: #524162;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+// Ajuste para el botón de Registrarse (más pequeño o diferente)
+ion-button[href="/register"] {
+  --background: #ddcccc;
+  --color: #5a4131;
+  margin-top: 10px;
+}
+// Estilo para los campos de Usuario y Contraseña
+.user, .password {
+  /* Fondo: Usamos el crema claro de tu paleta para que sea legible */
+  --background: #e6d5d5; 
+  
+  /* Texto: El gris oscuro para que contraste perfecto */
+  --color: #414141;
+  --placeholder-color: #735262;
+  
+  /* El color de la línea cuando haces clic para escribir */
+  --highlight-color-focused: #8362ac; 
+
+  margin-top: 15px;
+  
+  /* Bordes: No tan redondos para que se vea más profesional */
+  border-radius: 12px; 
+  
+  /* Borde sólido con el morado de tu paleta */
+  border: 2px solid #ac8bc5; 
+  
+  /* Espaciado interno para que el texto no toque los bordes */
+  padding: 8px 15px !important;
+  
+  /* Fuente tipo consola/retro */
+  font-family: 'Courier New', Courier, monospace;
+  
+  /* Sombra interna para dar profundidad */
+  box-shadow: inset 2px 2px 5px rgba(82, 65, 98, 0.1);
+}
+
+/* Efecto cuando el mouse pasa por encima (opcional) */
+.user:hover, .password:hover {
+  border-color: #8362ac;
+}
+.loginback{
+  --background: #ddcccc;
 }

@@ -1,22 +1,98 @@
-ion-list{
-    background-color: #ac8bc5;
+// Fondo general de la página
+ion-content {
+  --background: #e6d5d5; // Color crema de fondo principal
 }
-ion-item{
-    --background: #e6d5d5;
-}
-ion-searchbar{
+
+// Barra de búsqueda
+ion-searchbar {
   --background: #ffffff;
-  color: black;
+  --color: #414141; // Gris oscuro para el texto
+  --placeholder-color: #524162;
   --border-radius: 14px;
-  height: 40px;
-  max-width: 500px;
-  margin: auto;
+  margin-top: 10px;
 }
-.divlista{
-    padding: 50px;
-    background-color: #ac8bc5;
+
+// Contenedor de la lista de juegos
+.divlista {
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #ac8bc5; // Morado claro de fondo para la lista
+  padding: 8px;
+  border: 2px solid #8362ac; // Morado más intenso para el borde
 }
-.juego{
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+ion-item {
+  --background: #b49c9c; // Color café/rosáceo para los items
+  --color: #ffffff;
+  --border-color: #735262; // Separador entre items
+  margin-bottom: 4px;
+  border-radius: 8px;
+
+  ion-avatar {
+    border: 2px solid #ffac62; // Naranja resaltando el avatar del juego
+  }
+}
+
+// Estilo del texto del juego
+.juego {
+  color: #414141; // Gris oscuro para máxima legibilidad
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+// Cuadro de Resumen
+.resumen {
+  background-color: #b49c9c; // Color café suave
+  border: 4px solid #5a4131; // Café oscuro para un borde tipo "madera" o consola vieja
+  margin: 20px;
+  padding: 15px;
+  border-radius: 8px;
+
+  .juego {
+    color: #414141;
+  }
+}
+
+// Botón de Pagar
+.pay {
+  --background: #ffac62; // Morado fuerte
+  --background-activated: #db8336; // Morado muy oscuro al presionar
+  --color: #ffffff;
+  font-weight: bold;
+  --border-radius: 20px;
+}
+
+// Barra de pestañas inferior (Tabs)
+ion-tab-bar {
+  --background: #524162; // Morado muy oscuro de fondo
+  border-top: 3px solid #ffac62; // Línea naranja brillante arriba de los tabs
+}
+
+ion-tab-button {
+  --color: #b49c9c; // Color inactivo (café suave)
+  --color-selected: #ffac62; // Color activo (Naranja)
+  background-color: #524162;
+
+  .tabbtn {
+    background-color: transparent !important;
+    color: inherit;
+    font-weight: bold;
+  }
+}
+
+// Iconos de los Tabs
+ion-icon {
+  background-color: transparent !important;
+  font-size: 26px;
+  // El color lo hereda automáticamente del ion-tab-button (naranja si está seleccionado)
+}
+
+// Estilo para el botón Salir específicamente (opcional)
+ion-tab-button[click] {
+    --color: #ffac62;
 }

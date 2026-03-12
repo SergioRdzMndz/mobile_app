@@ -1,72 +1,103 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+// Fondo general de la página
+ion-content {
+  --background: #e6d5d5; // Crema principal
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #FFFFFF;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-ion-searchbar{
+// Buscador (igual al del carrito para consistencia)
+ion-searchbar {
   --background: #ffffff;
-  color: black;
+  --color: #414141;
+  --placeholder-color: #524162;
   --border-radius: 14px;
-  height: 40px;
-  max-width: 500px;
-  margin: auto;
+  margin-top: 15px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-ion-card{
-  --background: #e6d5d5;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  color: black;
+// Tarjetas de Videojuegos
+ion-card {
+  --background: #b49c9c; // Café/rosáceo suave
+  margin: 20px;
+  border-radius: 12px;
+  border: 3px solid #735262; // Borde oscuro para dar relieve
+  box-shadow: 6px 6px 0px #524162; // Sombra sólida tipo retro/arcade
+  color: #414141;
 }
 
-ion-card-title{
-
-  color: rgb(97, 5, 131);
-  text-shadow:
-    2px 2px 0 #dbd46a
-
+// Títulos dentro de las tarjetas
+ion-card-title {
+  color: #524162 !important; // Morado oscuro
+  font-family: 'Gameplay', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #ffac62; // Sombra naranja neón
+  margin-bottom: 10px;
 }
 
-.img-title{
-  width: 330px;
-  height: 160px;
+// Imágenes de los juegos
+.img-title {
+  width: 90%;
+  height: auto;
   border-radius: 8px;
   align-self: center;
-  margin-top: 20px;
+  margin: 15px auto;
+  border: 2px solid #5a4131; // Marco color madera/café oscuro
 }
 
-.text-title{
+/* --- Título que NO cambia (Categoria de videojuegos) --- */
+.text-title {
   font-family: 'Gameplay';
   color: black;
   padding-left: 10px;
   text-shadow:
     2px 2px 0 #974886,
-    4px 4px 0 #fffb0094,
+    4px 4px 0 #fffb0094;
 }
 
+// Barra de pestañas inferior (Igual al Carrito)
+ion-tab-bar {
+  --background: #524162; // Morado oscuro
+  border-top: 3px solid #ffac62; // Línea naranja superior
+  height: 65px;
+}
 
+ion-tab-button {
+  --color: #b49c9c; // Inactivo
+  --color-selected: #ffac62; // Activo (Naranja)
+  background-color: #524162;
 
+  .tabbtn {
+    background-color: transparent !important;
+    color: inherit;
+    font-weight: bold;
+    font-size: 12px;
+  }
+}
+
+// Iconos de los Tabs
+ion-icon {
+  background-color: transparent !important;
+  font-size: 26px;
+  // El color naranja lo maneja automáticamente el ion-tab-button al estar seleccionado
+}
+
+// Estilo para el contenedor central (si tienes elementos ahí)
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  p {
+    font-size: 16px;
+    color: #414141;
+    margin: 0;
+  }
+  
+  strong {
+    font-size: 20px;
+    color: #524162;
+  }
+}

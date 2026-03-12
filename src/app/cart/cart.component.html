@@ -12,7 +12,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div>
     <div class="divlista">
       <ion-list>
       @for (item of items; track item; let index = $index) {
@@ -25,8 +24,39 @@
        }
       </ion-list>
     </div>
-  </div>
-  <ion-label>Total: $227</ion-label>
 
-  
-</ion-content>  
+<div class="resumen">
+  <p class="juego">Resumen:</p>
+  <p class="juego">Articulos: 1</p>
+  <p class="juego">Total:$227</p>
+  <div class="pagar">
+    <ion-button shape="round" class="pay" (click)="confirmarPago()">Pagar</ion-button>
+  </div>
+</div>
+
+<ion-alert
+  [isOpen]="isPayAlertOpen"
+  header="Retro Respawn"
+  message="¡Pago realizado!"
+  [buttons]="payButtons"
+  (didDismiss)="isPayAlertOpen = false"
+  cssClass="custom-alert-colors"
+></ion-alert>
+
+  </ion-content>  
+<ion-tab-bar slot="bottom">
+  <ion-tab-button href="/home">
+    <ion-icon name="home"></ion-icon>
+    <ion-label class="tabbtn">Inicio</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button href="/cart">
+    <ion-icon name="cart"></ion-icon>
+    <ion-label class="tabbtn">Carrito</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button (click)="router.navigate(['/login'])">
+    <ion-icon name="salir"></ion-icon>
+    <ion-label class="tabbtn">Salir</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
