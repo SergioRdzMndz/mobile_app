@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonIcon, IonTabButton, IonTabBar, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonSearchbar, IonText, IonLabel],
+  imports: [IonIcon, IonTabButton, IonTabBar, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonSearchbar, IonText, IonLabel],
 })
 export class HomePage {
   constructor(public router: Router) {

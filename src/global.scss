@@ -60,6 +60,7 @@ ion-toolbar{
   .alert-wrapper {
     background: #ac8bc5 !important;
     border: 2px solid #e6d5d5; /* Un borde para que se vea más retro */
+    border-radius: 20px;
   }
 
   .alert-title, 
@@ -73,3 +74,21 @@ ion-toolbar{
     font-weight: bold;
   }
 }
+
+.custom-alert-colors .alert-wrapper {
+  background: #ac8bc5 !important;
+  border: 2px solid #e6d5d5;
+}
+
+.custom-alert-colors .alert-title,
+.custom-alert-colors .alert-sub-title,
+.custom-alert-colors .alert-message {
+  color: #ffffff !important;
+}
+
+.custom-alert-colors .alert-button {
+  color: #e6d5d5 !important;
+  font-weight: bold;
+}
+
+

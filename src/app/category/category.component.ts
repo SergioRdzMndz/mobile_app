@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { cart, home, logOutOutline } from 'ionicons/icons';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -27,7 +28,7 @@ games = [
     {name : "Call of Duty®: Modern Warfare® II", description : "Call of Duty®: Modern Warfare® II lanza a los jugadores en un conflicto global sin precedentes que incluye el regreso de los icónicos Operadores de la Fuerza Operativa 141.", price: 1399, img : "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3595230/ce4d5e53b36cb9d3c4309d1df72bf8663bbbc7ef/header.jpg?t=1764711899"}
 ]
 
-  constructor(public router: Router) {
+  constructor(public router: Router, private alertController: AlertController) {
     // Registramos los iconos: home, cart y el de logout
     addIcons({ 
     home, 
@@ -35,6 +36,28 @@ games = [
     'salir': logOutOutline  // <--- Este es el "apodo" o nombre clave
   });
   }
+
+  async addToCart() {
+  const alert = await this.alertController.create({
+    header: 'Producto agregado',
+    message: 'El juego se agregó al carrito',
+    cssClass: 'custom-alert-colors',
+    buttons: [
+      {
+        text: 'Seguir viendo',
+        role: 'cancel'
+      },
+      {
+        text: 'Ir al carrito',
+        handler: () => {
+          this.router.navigate(['/cart']);
+        }
+      }
+    ]
+  });
+
+  await alert.present();
+}
 
   ngOnInit() {}
   logout() {
